@@ -1,0 +1,589 @@
+/* BASE CSS */
+
+main figure img{
+    width:100%;
+}
+
+* {
+	box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+	font-size: 15px; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+	line-height:1.5;
+	font-family:Open Sans;
+	background-color:white;
+}
+
+main{
+    padding:20px;
+}
+
+footer{
+    font-family:Open Sans;
+}
+
+
+a {
+	text-decoration: none;
+	color:#0c6588;
+	
+}
+
+a:hover {
+	text-decoration:none;
+	color:#000;
+
+}
+
+main p{
+    margin-bottom:20px;
+    margin-top:20px;
+}
+.container{
+    padding:10px;
+    
+}
+
+
+h1{
+    font-size:36px;
+    font-family:Raleway;
+    font-weight:400;
+}
+
+h2{
+    font-weight:300;
+    font-size:24px;
+    font-family:Raleway;
+    margin:10px;
+}
+
+h3{
+    font-weight:300;
+    font-size:18px;
+    font-family:Raleway;
+    margin:10px;
+}
+
+article{
+    margin:10px;
+}
+
+
+
+/* EXO */ 
+
+.raleway- {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+}
+
+.open-sans-{
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src:
+    local("icomoon"),
+    url("../instructions/front/fonts/icomoon.ttf") format("opentype") tech(color-COLRv1),
+    url("../instructions/front/fonts/icomoon.woff") format("woff");
+}
+
+
+/* HEADER */
+.cyan{
+    line-height:2;
+    text-align:center;
+    background-color:#e2f7ff;
+}
+
+.bgheader{
+    background-image: url(../instructions/FRONT/images/header.jpg);
+    background-color:#0c6588;
+    color:white;
+    text-align:center;
+    background-repeat: no-repeat;
+}
+
+svg{
+    max-width:80px;
+}
+
+.headline{
+
+    display:flex;
+    justify-content:center;
+
+    
+}
+
+.buttonhead {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    a{
+        color:white;
+}
+}
+
+section div p a{
+    color:white;
+}
+
+.nav{
+    font-weight:400;
+    
+    width:100%;
+    background-color:#e2f7ff;
+    color:#0c6588;
+    border:none;
+    display:flex;
+    flex-direction:column;
+    list-style-type:none;
+    text-align:center;
+    align-items:center;
+}
+
+.nav li{
+    display: flex; /* Ensure the li itself is a flex container */
+            align-items: center; /* Vertically center items */
+            justify-content: center; /* Horizontally center items if needed */
+            width: 100%;
+            height: 100%;
+            padding: 10px 0; /* Add padding to control the height */
+}
+
+.nav li:hover{
+    background-color:rgba(24,12,188,0.2);
+    
+}
+
+
+/* MAIN */
+
+
+.margin{
+    width:90%;
+    margin:auto;
+}
+
+pre{
+    color:black;
+    display: inline;
+    margin-top:10px;
+}
+
+.underline{
+    text-decoration:underline;
+}
+
+h2{
+    display:flex;
+    align-items:center;
+}
+
+main h2:after{
+    content: "";
+      height: 24px;
+      flex: 1;
+      color: var(black);
+      margin-left: 1em;
+      width: 150px;
+      background-image: radial-gradient(var(black) 3px, transparent 4px);
+      background-size: 24px 24px;
+}
+
+
+.tag-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px
+}
+
+main .theme, main .tag:after, main .tag:before, main .tag {
+  color: #333;
+  border-color: #777;
+  border-style: solid;
+  background-color: #fff;
+  background: linear-gradient(#fff, #ddd);
+  background-clip: padding-box;
+}
+main .tag {
+  display: block;
+  float: left;
+  font-size: 13px; /* Réduire la taille de la police */
+  padding: 5px 8px; /* Réduire le padding */
+  line-height: 1;
+  position: relative;
+  margin-left: 15px; /* Augmenter l'espacement entre les éléments */
+  border-width: 1px 1px 1px 0;
+  border-radius: 0 3.75px 3.75px 0;
+}
+main .tag:before, main .tag:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-width: 1px;
+}
+main .tag:before {
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 24px; /* Ajuster la largeur */
+  height: 24px; /* Ajuster la hauteur */
+  transform: translate(-12px, -1px) scale(0.70711, 0.70711) rotateZ(-45deg); /* Ajuster la translation */
+  border-radius: 5px 0 0 0;
+}
+main .tag:after {
+  top:7px;
+  left: -5px;
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 50%;
+  background: white;
+}
+main .tag, main .tag:before {
+  -ms-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+main .tag:after {
+  -ms-box-shadow: inset 2px 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 2px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.presdirection{
+    display:flex;
+    flex-direction:column;
+}
+
+slider-container {
+
+        p {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .slider {
+            margin: 0 auto;
+            width: 80%;
+
+
+            #slippry-demo {
+                display: flex;
+
+                li {
+                    margin-right: 1.8rem;
+                    list-style-type: none;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    div ul{
+    display:flex;
+    flex-direction:row;
+    li{
+    list-style-type:none;
+}
+    img{
+    width:50%;
+}
+}
+
+.textcenter{
+    margin:20px;
+    text-align:center;
+}
+
+
+.panier{
+    color:white;
+    background-color:#0C6588;
+    font-size:20px;
+    padding:10px;
+    cursor:pointer;
+}
+
+.point{
+    list-style-type: disc;
+    padding:10px;
+    margin-left:40px;
+    color:#555;
+    font-size:15px;
+    margin-bottom:50px;
+}
+
+
+img{
+    
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #ccc;
+}
+
+td {
+  padding: 8px;
+  text-align: start;
+  border-bottom: 1px solid #ddd;
+}
+
+td:nth-child(2) {
+  /* Sélectionne la deuxième cellule de chaque ligne, qui est la colonne d'espace */
+  width: 50px; /* Ajustez la largeur selon vos besoins */
+}
+
+
+
+.search-container {
+    display: none;
+    align-items: center;
+    margin-top:12px;
+    justify-content:space-between;
+    width:50%;
+    height:100%;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.search-input {
+    background-color: rgba(255,255,255, 0.1);
+    border: none;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    margin:0;
+    color:white
+}
+
+input, button{
+    height:45px;
+}
+
+
+.search-button {
+    border: none;
+    background-color:rgba(255,255,255, 0.1);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.search-input::placeholder {
+    color: white;
+}
+
+.tablerow{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+.title{
+        width:100%;
+        padding:0px;
+    }
+    
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    background-image: url(../instructions/FRONT/images/footer.jpg);
+}
+.footer-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+ .divfooter{
+     display:flex;
+     align-items:center;
+     flex-direction:column;
+ }
+ 
+.footer div {
+    flex: 1;
+    margin: 0 10px;
+}
+.footer .h2footer {
+    color:white;
+    margin-bottom: 10px;
+}
+.footer1, .reseaux, .payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reseaux i {
+    margin: 0 10px;
+    font-size: 24px;
+}   
+
+footer section div div a{
+    color:white;
+    text-decoration:underline;
+}
+
+@media screen and (min-width: 960px){
+    .headerrow{
+        margin:auto;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+    }
+    
+    .headerimg{
+        min-width:90px;
+    }
+    
+    .cyan{
+        display:flex;
+        justify-content:space-evenly
+    }
+    
+    .nav{
+        flex-direction:row;
+        justify-content:space-evenly;
+        height:50px;
+    }
+    
+    .headercol{
+        display:flex;
+        flex-direction:column;
+    }
+    
+    .tag-list{
+        display:flex;
+        flex-wrap:nowrap;
+        gap:10px
+    }
+    
+    .presdirection{
+    flex-direction:row;
+    }
+    
+    slider-container {
+        width:50%;
+    }
+    
+    .logo::before {
+        content: url("../instructions/FRONT/images/logo-sm.png");
+        display: inline-block;
+        margin-right: 100px;
+        vertical-align: middle;
+    }
+    
+    .descrow{
+        display:flex;
+        flex-direction:row;
+    }
+    
+    .descrowreverse{
+        display:flex;
+        flex-direction:row-reverse;
+    }
+    
+    .imgcontainer{
+        padding:4em 2em;
+        border:1px solid lightgrey;
+        width: 600px;
+        margin: 0px 30px;
+    }
+    
+    .search-container {
+    display: flex;
+    
+    }
+    
+    .headline{
+        padding:20px;
+    }
+    
+    .buttonhead{
+        display:flex;
+        position:relative;
+        right:50px;
+        a{
+        margin:0px 20px;
+        min-width:100px;
+    }
+    }
+    
+    .footer-row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .reseaux {
+        flex-direction: row;
+    }
+    }
+    
+    .column{
+        display:flex;
+        flex-direction:column;
+    }
+    
+    .tablerow{
+        display:flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        width:100%;
+        align-items: center;
+    }
+    
+    .title{
+        width:50%;
+        padding:0px;
+    }
+    
+    
+    
+    
+    .payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    }
+    
+}
+
+
